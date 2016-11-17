@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>How you doin</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <div class="cantada-container">
+    <p>{{cantada}}</p>
+    <button *ngIf=cantada ion-button color="secundary" (click)=shareCantada(cantada)>Share this cantada</button>
+  </div>
+
+  <div class="button-container">
+    <button ion-button color="primary" (click)=getCantada()>Give me something</button>
+  </div>
+
+</ion-content>
