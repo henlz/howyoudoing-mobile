@@ -1,7 +1,9 @@
 import {NgModule} from '@angular/core';
-import {HttpModule} from '@angular/http';
 import {IonicApp, IonicModule} from 'ionic-angular';
 import {MyApp} from './app.component';
+
+import {BackandService} from '../services/backandService';
+import {CantadaService} from '../services/cantada.service';
 
 import {HelloIonicPage} from '../pages/hello-ionic/hello-ionic';
 import {SettingsPage} from '../pages/settings/settings';
@@ -13,8 +15,7 @@ import {SettingsPage} from '../pages/settings/settings';
     SettingsPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp),
-    HttpModule
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -22,7 +23,10 @@ import {SettingsPage} from '../pages/settings/settings';
     HelloIonicPage,
     SettingsPage
   ],
-  providers: []
+  providers: [
+    BackandService,
+    CantadaService
+  ]
 })
 export class AppModule {
 }
